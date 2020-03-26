@@ -6,7 +6,7 @@ public class MyKey {
     private String month;
     private Integer prod;
 
-    public MyKey(String month, Integer prod) {
+    MyKey(String month, Integer prod) {
         this.month = month;
         this.prod = prod;
     }

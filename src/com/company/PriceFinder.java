@@ -4,13 +4,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public final class PriceFinder {
-    public List<String> months;
-    HashMap<MyKey, Integer> map = new HashMap<>();
+final class PriceFinder {
+    private HashMap<MyKey, Integer> map = new HashMap<>();
 
-    public void addList(List<Integer> list) {
-
-        months = new ArrayList<>();
+    void addList(List<Integer> list) {
+        List<String> months = new ArrayList<>();
         months.add("Jan");
         months.add("Feb");
         months.add("Mar");
@@ -29,7 +27,7 @@ public final class PriceFinder {
 
         for(int i = 0; i < list.size(); i++) {
             map.put(new MyKey(months.get(j), prod), list.get(i));
-            if(months.get(j)=="Dec") {
+            if(months.get(j).equals("Dec")) {
                 prod++;
                 j = 0;
             } else {
